@@ -1,0 +1,120 @@
+.auth-container {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* ensure full viewport height */
+  background-color: #f5f5f5;
+}
+
+.auth-left {
+  flex: 1 1 50%;
+  position: relative;
+  min-height: 100vh;
+  padding: 0; /* let image cover edge-to-edge */
+  overflow: hidden;
+}
+
+.auth-image {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.auth-right {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 48px; /* more breathing room like the design */
+  background: #ffffff; /* white panel on the right */
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 520px; /* wider card for register layout */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.auth-card .card-inner {
+  background: #ffffff;
+  padding: 40px 36px;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(16, 24, 40, 0.08);
+}
+
+.auth-card h2 {
+  margin: 0 0 18px 0;
+  color: #ffa319;
+  text-align: center;
+  font-size: 20px;
+}
+
+.auth-card form {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-card input {
+  padding: 14px 16px;
+  border: 1px solid #f0eae3;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  width: 100%;
+  color: #333;
+}
+
+.auth-card button {
+  margin-top: 10px;
+  padding: 14px 16px;
+  background: #ffa319;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.auth-footer {
+  margin-top: 18px;
+  color: #666;
+  font-size: 13px;
+  text-align: center;
+}
+
+.auth-footer span {
+  color: #ffa319;
+  cursor: pointer;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .auth-left {
+    padding: 24px;
+    min-height: auto;
+  }
+  .auth-right {
+    padding: 24px;
+  }
+  .auth-image {
+    position: static;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    margin: 0 auto 16px;
+    display: block;
+  }
+}
