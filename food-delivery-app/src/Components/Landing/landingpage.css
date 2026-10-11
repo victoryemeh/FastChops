@@ -225,6 +225,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
+  color: #111;
 }
 
 .footer h4 {
@@ -242,8 +243,9 @@ body {
   padding: 8px 14px;
 }
 
-copyright {
+.copyright {
   text-align: center;
+  color:#111;
 }
 
 @media (max-width: 1024px) {
